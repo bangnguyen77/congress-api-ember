@@ -1,0 +1,10 @@
+
+<h3>{{model.[0].parent_committee_id}}</h3>
+
+{{#if model}}
+  {{#each model as |subcommittee|}}
+    {{subcommittee-tile subcommittee=subcommittee}}
+  {{/each}}
+{{else}}
+  <p>This committee has no subcommittees</p>
+{{/if}}

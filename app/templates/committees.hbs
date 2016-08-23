@@ -1,5 +1,5 @@
 <h2>Committees</h2>
 {{#each model.results as |committee|}}
-  {{committee-tile committee=committee}}
+  {{#link-to 'subcommittees' committee.committee_id}}{{committee-tile committee=committee}}{{/link-to}}
 {{/each}}
 {{prev-next-links page=model.page totalCount=model.count}}
