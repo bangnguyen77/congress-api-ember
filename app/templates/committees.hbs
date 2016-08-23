@@ -2,4 +2,4 @@
 {{#each model.results as |committee|}}
   {{#link-to 'subcommittees' committee.committee_id}}{{committee-tile committee=committee}}{{/link-to}}
 {{/each}}
-{{prev-next-links page=model.page totalCount=model.count}}
+{{prev-next-links route="committees" page=model.page totalCount=model.count}}
