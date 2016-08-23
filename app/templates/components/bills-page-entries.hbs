@@ -1,0 +1,8 @@
+{{bill-details bill=selectedBill}}
+<hr>
+{{#each bills as |bill|}}
+  <strong>{{bill.bill_id}}</strong>: <em>{{bill.short_title}}</em><br>
+  Last version issued on {{bill.last_version_on}}<br>
+  {{bill.official_title}}<br>
+  <button {{action 'details' bill}}>Details</button><hr>
+{{/each}}

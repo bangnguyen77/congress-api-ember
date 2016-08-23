@@ -1,7 +1,6 @@
 <h2>Bills.</h2>
-{{#each model.results as |bill|}}
-  <strong>{{bill.bill_id}}</strong>: <em>{{bill.short_title}}</em><br>
-  Last version issued on {{bill.last_version_on}}<br>
-  {{bill.official_title}}<hr>
-{{/each}}
+<hr>
+
+{{bills-page-entries bills=model.results}}
+<hr>
 {{prev-next-links route="bills" page=model.page totalCount=model.count}}
